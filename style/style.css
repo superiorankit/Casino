@@ -175,7 +175,7 @@ nav{
 }
 
 .aboutImg{
-    width: 30%;
+    width: 387px;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -210,14 +210,19 @@ nav{
 
 .gamesCardCont{
     display: flex;
-    justify-content: space-between;
-    width: 87%;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
     margin-top: 4%;
 }
 
 .gamesCard{
     width: 263px;
     color: white;
+    margin-bottom: 40px;
+    margin-right: 1%;
+    margin-left: 1%;
 }
 
 .gamesCardImgTxt{
@@ -306,8 +311,9 @@ nav{
 .playCardCont{
     margin: 5% 0;
     display: flex;
-    justify-content: space-between;
-    width: 62%;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 
 .playCard{
@@ -315,6 +321,9 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
 }
 
 .playCardImg{
@@ -360,9 +369,11 @@ nav{
 
 .priceCardCont{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin: 5% 0;
+    width: 100%;
 }
 
 .priceCard{
@@ -371,6 +382,7 @@ nav{
     justify-content: center;
     align-items: center;
     margin: 0px 1%;
+    margin-bottom: 40px;
 }
 
 .priceCardTxt{
@@ -544,7 +556,7 @@ footer{
     justify-content: center;
     align-items: center;
     color: white;
-    padding-top: 14%;
+    padding-top: 200px;
 }
 
 .subscribeBox{
@@ -619,7 +631,7 @@ footer{
     color: #8e8e8e;
 }
 
-@media (max-width:435px){
+@media (max-width:695px){
 
     .main{
         font-size: 0.9em;
@@ -683,16 +695,6 @@ footer{
         padding-right: 6%;
     }
 
-    .gamesCardCont{
-        flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    }
-
-    .gamesCard{
-        margin-bottom: 45px;
-    }
 
     .howToPlay{
         margin-top: 0;
@@ -705,14 +707,9 @@ footer{
     }
 
     .playCardCont{
-        flex-direction: column;
-        width: 100%;
         margin-bottom: 0;
     }
 
-    .playCard{
-        margin-bottom: 23px;
-    }
 
     .casinoPrice{
         padding-left: 6%;
@@ -721,14 +718,6 @@ footer{
 
     .casinoPrice>.pStyle{
         width: 100%;
-    }
-
-    .priceCardCont{
-        flex-direction: column;
-    }
-
-    .priceCard{
-        margin-bottom: 24px;
     }
 
     .customer{
@@ -763,6 +752,10 @@ footer{
     .customerBox>p{
         width: 100%;
         text-align: justify;
+    }
+
+    .customerBox>p:nth-child(4){
+        text-align: center;
     }
 
     .getInTouch{
