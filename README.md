@@ -4,7 +4,7 @@ Welcome to the Casino page of my project! This project showcases a well-designed
 
 ## Features
 
--Indexing on Nav Items
+- Indexing on Nav Items
 - Hover Effects on Cards and Buttons.
 
 
