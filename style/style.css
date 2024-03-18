@@ -1,47 +1,46 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
 
-.main{
+.main {
     width: 100%;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
 
 /* Wrapped every image to div therefore styling img tag width 100% */
-img{
+img {
     width: 100%;
 }
 
 /* Global class for giving font-family to particular element */
-.poppinsFont{
+.poppinsFont {
     font-family: "Poppins", sans-serif;
 }
 
 /* Global class for width 100% */
-.width100{
+.width100 {
     width: 100%;
 }
 
 /* Global class for color white */
-.colorWhite{
+.colorWhite {
     color: white;
 }
 
 /* Global class for margin 0 */
-.marginRemove{
+.marginRemove {
     margin: 0;
 }
 
-nav{
+nav {
     position: absolute;
     top: 0;
     z-index: 100;
@@ -53,23 +52,23 @@ nav{
 }
 
 
-.logo{
+.logo {
     width: fit-content;
     display: flex;
 }
 
-.logoImg{
+.logoImg {
     width: 23px;
 }
 
-.logo>p{
+.logo>p {
     font-size: 1.1em;
     font-weight: 500;
     margin-left: 3px;
     margin-top: 2px;
 }
 
-.toggleButton{
+.toggleButton {
     width: 24px;
     display: flex;
     flex-direction: column;
@@ -79,34 +78,36 @@ nav{
     cursor: pointer;
 }
 
-.toggleBarTop, .toggleBarBottom, .toggleBarMid{
+.toggleBarTop,
+.toggleBarBottom,
+.toggleBarMid {
     background-color: white;
     height: 2.5px;
     transition: all 0.3s;
 }
 
-.toggleBarMid{
+.toggleBarMid {
     width: 80%;
 }
 
-#checkbox{
+#checkbox {
     display: none;
 }
 
-#checkbox:checked + label > .toggleBarTop{
+#checkbox:checked+label>.toggleBarTop {
     transform: rotate(45deg) translate(8px, 8px);
 }
 
-#checkbox:checked + label > .toggleBarMid{
+#checkbox:checked+label>.toggleBarMid {
     display: none;
 }
 
-#checkbox:checked + label > .toggleBarBottom{
+#checkbox:checked+label>.toggleBarBottom {
     transform: rotate(-45deg);
 }
 
 
-.nav-items{
+.nav-items {
     position: absolute;
     display: flex;
     width: 100%;
@@ -115,11 +116,11 @@ nav{
     top: 50px;
     left: 0;
     transform: scale(0);
-    transition: all 0.2s;
+    transition: all 0.5s;
 }
 
 
-.nav-items>a>div{
+.nav-items>a>div {
     padding-top: 2px;
     height: 2px;
     width: 0;
@@ -128,22 +129,33 @@ nav{
     margin: auto;
 }
 
-.nav-items>a:hover>div{
+.nav-items>a:hover>div {
     width: 100%;
 }
 
-.nav-items>a:active>div{
+.nav-items>a:active>div {
     width: 100%;
 }
 
-#checkbox:checked + label + .nav-items{
+#checkbox:checked+label+.nav-items {
     transform: scale(1);
 }
 
+/* Animation for scale effect */
+@keyframes scale {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+
+}
 
 
 
-.carousel{
+.carousel {
     background-image: url('../public/images/background-image.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -156,22 +168,26 @@ nav{
     position: relative;
 }
 
+.carousel>* {
+    animation: scale 0.3s linear normal;
+}
+
 
 /* Animation for Casino text */
 @keyframes textFill {
 
-    0%{
+    0% {
         width: 0;
     }
 
-    80%{
+    80% {
         width: 100%;
     }
 
-    100%{
+    100% {
         width: 100%;
     }
-    
+
 }
 
 .carousel>p:nth-child(1) {
@@ -180,7 +196,7 @@ nav{
     -webkit-text-stroke: 0.2px;
 }
 
-.carousel .h1{
+.carousel .h1 {
     font-size: 3.3em;
     letter-spacing: 15px;
     margin-left: 15px;
@@ -188,13 +204,13 @@ nav{
     font-weight: 500;
 }
 
-.carousel .h1>div:nth-child(1){
+.carousel .h1>div:nth-child(1) {
     -webkit-text-stroke: 1px rgb(255, 118, 118);
     color: transparent;
     background-color: transparent;
 }
 
-.carousel .h1>div:nth-child(2){
+.carousel .h1>div:nth-child(2) {
     position: absolute;
     top: 0;
     width: 0;
@@ -202,10 +218,10 @@ nav{
     border-right: 2px solid rgb(255, 118, 118);
     border-radius: 20px;
     background-image: linear-gradient(90deg, #cb959500 80%, #ff919124 100%);
-    animation: textFill 2.5s linear infinite alternate;
+    animation: textFill 2.5s linear 0.3s infinite alternate;
 }
 
-.carousel>p:nth-child(3){
+.carousel>p:nth-child(3) {
     text-align: center;
     width: 63%;
     font-weight: 300;
@@ -217,7 +233,7 @@ nav{
     word-spacing: 1;
 }
 
-.button{
+.button {
     border: 2px solid white;
     background-color: #333232;
     font-weight: 300;
@@ -230,12 +246,12 @@ nav{
     cursor: pointer;
 }
 
-.button>p{
+.button>p {
     position: relative;
 }
 
 
-.hover{
+.hover {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -247,18 +263,18 @@ nav{
     border-radius: 45px;
 }
 
-.button:hover .hover{
+.button:hover .hover {
     transform: scale(1);
 }
 
-.selectorCont{
+.selectorCont {
     position: absolute;
     display: flex;
     justify-content: space-between;
     bottom: 11%;
 }
 
-.selector{
+.selector {
     width: 15px;
     height: 15px;
     /* border: 1px solid white; */
@@ -267,13 +283,13 @@ nav{
     margin: 0px 2px;
 }
 
-.about{
+.about {
     display: flex;
     justify-content: center;
     padding: 8% 0;
 }
 
-.aboutTxt{
+.aboutTxt {
     display: flex;
     flex-direction: column;
     width: 41%;
@@ -281,39 +297,39 @@ nav{
     padding-top: 2.4%;
 }
 
-.pokerIconHead{
+.pokerIconHead {
     display: flex;
     align-items: end;
     margin-bottom: 6%;
 }
 
-.pokerIconHead>img{
+.pokerIconHead>img {
     width: 36px;
 }
 
-.pokerIconHead>h1{
+.pokerIconHead>h1 {
     font-size: 1.7em;
     margin-left: 2px;
 }
 
-.pStyle{
+.pStyle {
     font-size: 0.81em;
     font-weight: 400;
     line-height: 1.8;
     -webkit-text-stroke: 0.3px;
 }
 
-.aboutImg{
+.aboutImg {
     width: 387px;
     overflow: hidden;
     border-radius: 20px;
 }
 
-.aboutImg>img{
+.aboutImg>img {
     border-radius: 20px;
 }
 
-.fillButton{
+.fillButton {
     margin-top: 7%;
     background-color: bf3d41;
     width: fit-content;
@@ -325,12 +341,12 @@ nav{
     transition: all 0.2s;
 }
 
-.fillButton:hover{
-        cursor: pointer;
-        box-shadow: #ff7171 2px 2px 5px 3px inset, black 2px 2px 8px -4px;
+.fillButton:hover {
+    cursor: pointer;
+    box-shadow: #ff7171 2px 2px 5px 3px inset, black 2px 2px 8px -4px;
 }
 
-.allGames{
+.allGames {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -338,12 +354,12 @@ nav{
 
 }
 
-.allGames>.pokerIconHead{
+.allGames>.pokerIconHead {
     margin: 0;
     margin-bottom: 1%;
 }
 
-.gamesCardCont{
+.gamesCardCont {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -352,7 +368,7 @@ nav{
     margin-top: 4%;
 }
 
-.gamesCard{
+.gamesCard {
     width: 263px;
     height: fit-content;
     color: white;
@@ -362,21 +378,22 @@ nav{
     perspective: 1000px;
 }
 
-.gamesCard:hover .gamesCardImgTxt{
+.gamesCard:hover .gamesCardImgTxt {
     transform: rotatex(20deg);
 }
 
-.gamesCardImgTxt{
+.gamesCardImgTxt {
     border-radius: 27px;
     background-color: #121111;
     overflow: hidden;
     transition: all 0.2s;
 }
 
-.gamesImg{
+.gamesImg {
     position: relative;
 }
-.gamesIndex{
+
+.gamesIndex {
     position: absolute;
     bottom: 0;
     transform: translate(-50%, 50%);
@@ -389,14 +406,14 @@ nav{
     padding: 7px 14px;
 }
 
-.gamesCardImgTxt>h1{
+.gamesCardImgTxt>h1 {
     font-size: 1.4em;
     font-weight: 500;
     text-align: center;
     margin-top: 30px;
 }
 
-.gamesCardImgTxt>p{
+.gamesCardImgTxt>p {
     text-align: center;
     font-size: 0.75em;
     margin-top: 20px;
@@ -404,7 +421,7 @@ nav{
     padding: 0 5%;
 }
 
-.playButton{
+.playButton {
     background-color: #bf3d41;
     width: fit-content;
     padding: 14px 50px;
@@ -416,12 +433,12 @@ nav{
     margin-top: 17px;
 }
 
-.playButton:hover{
+.playButton:hover {
     cursor: pointer;
     box-shadow: #ff7171 2px 2px 5px 3px inset, black 2px 2px 8px -4px;
 }
 
-.unfillPlayButton{
+.unfillPlayButton {
     border: 2px solid #bf3d41;
     background-color: #121111;
     padding: 12px 48px;
@@ -430,11 +447,11 @@ nav{
 
 
 
-.unfillPlayButton:hover{
+.unfillPlayButton:hover {
     background-color: #bf3d41;
-} 
+}
 
-.howToPlay{
+.howToPlay {
     background-color: #121111;
     width: 100%;
     margin: 8% 0;
@@ -447,22 +464,22 @@ nav{
     align-items: center;
 }
 
-.howToPlay>.pokerIconHead{
+.howToPlay>.pokerIconHead {
     margin-bottom: 1%;
 }
 
-.howToPlay>.pokerIconHead>h1{
+.howToPlay>.pokerIconHead>h1 {
     font-size: 1.8em;
     margin-left: 10px;
     font-weight: 400;
 }
 
-.howToPlay>p{
+.howToPlay>p {
     width: 57%;
     font-weight: 300;
 }
 
-.playCardCont{
+.playCardCont {
     margin: 5% 0;
     display: flex;
     flex-wrap: wrap;
@@ -470,7 +487,7 @@ nav{
     width: 100%;
 }
 
-.playCard{
+.playCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -480,24 +497,24 @@ nav{
     margin-left: 2.5%;
 }
 
-.playCardImg{
+.playCardImg {
     width: 162px;
     border: 1px solid white;
     padding: 34px 59px;
     border-radius: 10px;
 }
 
-.playCard>p{
+.playCard>p {
     margin-top: 15px;
     font-weight: 300;
     -webkit-text-stroke: 0.1px;
 }
 
-.howToPlay>.fillButton{
+.howToPlay>.fillButton {
     margin: 0;
 }
 
-.casinoPrice{
+.casinoPrice {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -505,15 +522,15 @@ nav{
     text-align: center;
 }
 
-.casinoPrice>.pokerIconHead{
+.casinoPrice>.pokerIconHead {
     margin-bottom: 1.8%;
 }
 
-.casinoPrice>.pokerIconHead>h1{
+.casinoPrice>.pokerIconHead>h1 {
     font-size: 1.8em;
 }
 
-.casinoPrice>.pStyle{
+.casinoPrice>.pStyle {
     width: 65%;
     line-height: 1.5;
     color: #505050;
@@ -521,7 +538,7 @@ nav{
     -webkit-text-stroke: 0.1px;
 }
 
-.priceCardCont{
+.priceCardCont {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -530,7 +547,7 @@ nav{
     width: 100%;
 }
 
-.priceCard{
+.priceCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -540,7 +557,7 @@ nav{
     transition: all 0.5s;
 }
 
-.priceCardTxt{
+.priceCardTxt {
     text-align: center;
     border: 1px solid #505050b5;
     padding: 19px 50px;
@@ -549,62 +566,62 @@ nav{
     cursor: pointer;
 }
 
-.borderHover{
+.borderHover {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    
+
 }
 
 /* Animation for Price Card */
-@keyframes border{
-    from{
+@keyframes border {
+    from {
         border: 1px solid #000000b5;
         opacity: 1;
     }
 
-    to{
+    to {
         border: 1px solid #000000b5;
         transform: scaley(1.15) scalex(1.05);
         opacity: 0;
     }
 }
 
-.priceCard:hover{
+.priceCard:hover {
     transform: scale(1.05);
 }
 
 
-.priceCard:hover>.priceCardTxt>.borderHover{
-    
-    animation:  border 0.5s normal 2;
+.priceCard:hover>.priceCardTxt>.borderHover {
+
+    animation: border 0.5s normal 2;
 }
 
-.priceCardTxt>h1:nth-child(2){
+.priceCardTxt>h1:nth-child(2) {
     font-size: 1em;
     color: #bf3d42;
 }
 
-.priceCardTxt>h1:nth-child(3){
+.priceCardTxt>h1:nth-child(3) {
     font-size: 1.5em;
     color: #bf3d42;
 
 }
 
-.priceCardTxt>h1:nth-child(3)>span:nth-child(1){
+.priceCardTxt>h1:nth-child(3)>span:nth-child(1) {
     font-size: 1.5em;
     color: #505050;
 }
 
-.priceCardTxt>h1:nth-child(3)>span:nth-child(2){
+.priceCardTxt>h1:nth-child(3)>span:nth-child(2) {
     font-size: 0.7em;
     color: #505050;
 }
 
-.priceCardTxt>p{
+.priceCardTxt>p {
     font-size: 0.87em;
     width: 58%;
     margin: auto;
@@ -612,7 +629,8 @@ nav{
     color: #505050;
     margin-top: 5px;
 }
-.customer{
+
+.customer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -620,15 +638,15 @@ nav{
     margin: 7% 0;
 }
 
-.customer>.pokerIconHead{
+.customer>.pokerIconHead {
     margin-bottom: 5%;
 }
 
-.customer>.pokerIconHead>h1{
-    margin-left:15px;
+.customer>.pokerIconHead>h1 {
+    margin-left: 15px;
 }
 
-.customerBox{
+.customerBox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -637,7 +655,7 @@ nav{
     width: 75%;
 }
 
-.arrowBox{
+.arrowBox {
     background-color: #bf3d41;
     position: absolute;
     left: 0;
@@ -647,25 +665,25 @@ nav{
     width: 4.5%;
 }
 
-.rightArrow{
+.rightArrow {
     left: auto;
     right: 0;
     transform: rotatey(180deg);
 }
 
-.customerImg{
+.customerImg {
     width: 127px;
     border: 2.5px solid #bf3d41;
-    border-radius: 78px;   
+    border-radius: 78px;
 }
 
-.customerBox>h1{
+.customerBox>h1 {
     font-size: 1em;
     margin: 1.5% 0;
     margin-bottom: 0.9%;
 }
 
-.customerBox>p{
+.customerBox>p {
     text-align: center;
     font-size: 0.85em;
     -webkit-text-stroke: 0.2px;
@@ -674,12 +692,12 @@ nav{
     color: #424242;
 }
 
-.customerBox>p>img{
+.customerBox>p>img {
     width: 20px;
     margin: 0 9px;
 }
 
-.getInTouch{
+.getInTouch {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -688,16 +706,16 @@ nav{
     width: 100%;
 }
 
-.getInTouch>.pokerIconHead>h1{
+.getInTouch>.pokerIconHead>h1 {
     font-size: 1.8em;
     margin-left: 4px;
 }
 
-.getInTouch>.pokerIconHead{
+.getInTouch>.pokerIconHead {
     margin-bottom: 0%;
 }
 
-.formBox{
+.formBox {
     display: flex;
     /* flex-direction: column; */
     width: 77%;
@@ -710,13 +728,13 @@ nav{
     top: 74px;
 }
 
-.form{
+.form {
     display: flex;
     flex-direction: column;
     width: 53%;
 }
 
-input{
+input {
     border-radius: 0;
     outline: none;
     border: 1px solid #505050b5;
@@ -724,11 +742,11 @@ input{
     margin-bottom: 16px;
 }
 
-.textarea{
+.textarea {
     height: 90px;
 }
 
-.form>.fillButton{
+.form>.fillButton {
     color: white;
     border: none;
     padding: 13px 59px;
@@ -736,11 +754,11 @@ input{
     font-size: 0.9em;
 }
 
-.mapImg{
+.mapImg {
     width: 42%;
 }
 
-footer{
+footer {
     width: 100%;
     background-color: #121111e6;
     display: flex;
@@ -751,7 +769,7 @@ footer{
     padding-top: 200px;
 }
 
-.subscribeBox{
+.subscribeBox {
     display: flex;
     align-items: end;
     justify-content: space-between;
@@ -761,7 +779,7 @@ footer{
     margin-bottom: 37px;
 }
 
-.subscribeBox>input{
+.subscribeBox>input {
     margin: 0;
     background: transparent;
     outline: none;
@@ -769,23 +787,23 @@ footer{
     padding: 0;
 }
 
-.subscribeBox>p{
+.subscribeBox>p {
     font-size: 0.9em;
 }
 
 
 
-.socialIconsBox{
+.socialIconsBox {
     display: flex;
     justify-content: center;
 }
 
-.socialIcons{
+.socialIcons {
     margin: 0 2px;
     width: 17%;
 }
 
-.contactBox{
+.contactBox {
     display: flex;
     width: 61%;
     align-items: center;
@@ -794,77 +812,78 @@ footer{
     margin-bottom: 50px;
 }
 
-.contact{
+.contact {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contact>img{
+.contact>img {
     width: 27px;
 }
 
-.contact>p{
+.contact>p {
     margin-left: 23px;
     font-size: 0.8em;
     font-weight: 300;
 }
 
-.bar{
+.bar {
     height: 1px;
     width: 14%;
     background-color: white;
 }
 
-.copyright{
+.copyright {
     font-size: 0.85em;
     margin-top: 3.5%;
     margin-bottom: 2%;
     color: #8e8e8e;
 }
 
-@media (max-width:695px){
+@media (max-width:695px) {
 
-    .main{
+    .main {
         font-size: 0.9em;
     }
 
-    .logo{
+    .logo {
         margin: auto;
     }
-    .toggleButton{
+
+    .toggleButton {
         display: none;
     }
 
-    .nav-items{
+    .nav-items {
         position: fixed;
-    top: auto;
-    bottom: 0;
-    padding: 14px 0;
-    background-color: #171717;
-    font-size: 0.9em;
-    transform: scale(1);
+        top: auto;
+        bottom: 0;
+        padding: 14px 0;
+        background-color: #171717;
+        font-size: 0.9em;
+        transform: scale(1);
     }
 
-    .carousel{
+    .carousel {
         font-size: 0.8em;
     }
 
-    .carousel>p:nth-child(3){
+    .carousel>p:nth-child(3) {
         margin-top: 4%;
         width: 86%;
     }
 
-    .button{
+    .button {
         padding: 7px 30px;
     }
 
-    .selector{
+    .selector {
         width: 13px;
-    height: 13px;
+        height: 13px;
     }
 
-    .about{
+    .about {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
@@ -874,162 +893,157 @@ footer{
         padding-top: 75px;
     }
 
-    .aboutTxt>.pokerIconHead{
+    .aboutTxt>.pokerIconHead {
         position: absolute;
-    top: 29px;
+        top: 29px;
     }
 
-    .fillButton{
+    .fillButton {
         margin-top: 3%;
     }
 
-    .aboutTxt{
+    .aboutTxt {
         width: 100%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
-    .aboutImg{
+    .aboutImg {
         width: 100%;
     }
 
-    .pStyle{
+    .pStyle {
         text-align: justify;
     }
 
-    .allGames{
+    .allGames {
         padding-left: 6%;
         padding-right: 6%;
     }
 
 
-    .howToPlay{
+    .howToPlay {
         margin-top: 0;
-    padding-left: 6%;
-    padding-right: 6%;
+        padding-left: 6%;
+        padding-right: 6%;
     }
 
-    .howToPlay>p{
+    .howToPlay>p {
         width: 100%;
     }
 
-    .playCardCont{
+    .playCardCont {
         margin-bottom: 0;
     }
 
 
-    .casinoPrice{
-        padding-left: 6%;
-    padding-right: 6%;
-    }
-
-    .casinoPrice>.pStyle{
-        width: 100%;
-    }
-
-    .customer{
-        padding-left: 6%;
-    padding-right: 6%;
-    margin: 0;
-    }
-
-    .customer>.pokerIconHead{
-        align-items: center;
-    justify-content: space-between;
-    }
-
-    .customer>.pokerIconHead>h1{
-        margin-left: 3px;
-        font-size: 1.5em;
-    }
-
-    .customerBox{
-        width: 100%;
-    }
-
-    .customerBox>h1{
-        margin: 2% 0;
-    }
-
-    .customerBox>p{
-        width: 100%;
-        text-align: justify;
-    }
-
-    .customerBox>p:nth-child(4){
-        text-align: center;
-    }
-
-    .getInTouch{
+    .casinoPrice {
         padding-left: 6%;
         padding-right: 6%;
     }
 
-    .formBox{
-        flex-direction: column-reverse;
-    width: 100%;
-    padding: 21px;
-    top: 59px;
-    }
-
-    .form{
+    .casinoPrice>.pStyle {
         width: 100%;
     }
-    
-    .form>.fillButton{
+
+    .customer {
+        padding-left: 6%;
+        padding-right: 6%;
+        margin: 0;
+    }
+
+    .customer>.pokerIconHead {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .customer>.pokerIconHead>h1 {
+        margin-left: 3px;
+        font-size: 1.5em;
+    }
+
+    .customerBox {
+        width: 100%;
+    }
+
+    .customerBox>h1 {
+        margin: 2% 0;
+    }
+
+    .customerBox>p {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .customerBox>p:nth-child(4) {
+        text-align: center;
+    }
+
+    .getInTouch {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .formBox {
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 21px;
+        top: 59px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .form>.fillButton {
         margin: auto;
     }
 
-    .mapImg{
+    .mapImg {
         width: 100%;
         margin-bottom: 20px;
     }
 
 
-    footer{
+    footer {
         padding-top: 85px;
         padding-left: 6%;
         padding-right: 6%;
     }
 
-    .subscribeBox{
+    .subscribeBox {
         width: auto;
     }
 
-    .contactBox{
+    .contactBox {
         flex-direction: column;
         align-items: start;
         width: auto;
         margin-bottom: 10px;
     }
 
-    .contact{
+    .contact {
         margin-bottom: 10px;
     }
 
-    .contact>img{
+    .contact>img {
         width: 18px;
     }
 
-    .contact>p{
+    .contact>p {
         margin-left: 5px;
     }
 
-    .bar{
+    .bar {
         width: 175px;
     }
 
-
-    .copyright{
+    .copyright {
         font-size: .7em;
-    margin-top: 7%;
-    margin-bottom: 4%;
-    padding-bottom: 40px;
+        margin-top: 7%;
+        margin-bottom: 4%;
+        padding-bottom: 40px;
     }
 
-
-
-
 }
-
