@@ -6,11 +6,15 @@
     font-family: "Roboto", sans-serif;
 }
 
-
-
 .main{
     width: 100%;
 }
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
 
 /* Wrapped every image to div therefore styling img tag width 100% */
 img{
@@ -50,12 +54,12 @@ nav{
 
 
 .logo{
-    width: 6%;
+    width: fit-content;
     display: flex;
 }
 
 .logoImg{
-    width: 30%;
+    width: 23px;
 }
 
 .logo>p{
@@ -72,16 +76,72 @@ nav{
     align-items: center;
     height: 14px;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .toggleBarTop, .toggleBarBottom, .toggleBarMid{
     background-color: white;
     height: 2.5px;
+    transition: all 0.3s;
 }
 
 .toggleBarMid{
     width: 80%;
 }
+
+#checkbox{
+    display: none;
+}
+
+#checkbox:checked + label > .toggleBarTop{
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+#checkbox:checked + label > .toggleBarMid{
+    display: none;
+}
+
+#checkbox:checked + label > .toggleBarBottom{
+    transform: rotate(-45deg);
+}
+
+
+.nav-items{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    color: white;
+    top: 50px;
+    left: 0;
+    transform: scale(0);
+    transition: all 0.2s;
+}
+
+
+.nav-items>a>div{
+    padding-top: 2px;
+    height: 2px;
+    width: 0;
+    background-color: #f39292;
+    transition: all 0.3s;
+    margin: auto;
+}
+
+.nav-items>a:hover>div{
+    width: 100%;
+}
+
+.nav-items>a:active>div{
+    width: 100%;
+}
+
+#checkbox:checked + label + .nav-items{
+    transform: scale(1);
+}
+
+
+
 
 .carousel{
     background-image: url('../public/images/background-image.jpg');
@@ -769,6 +829,19 @@ footer{
         font-size: 0.9em;
     }
 
+    .toggleButton{
+        display: none;
+    }
+
+    .nav-items{
+        position: fixed;
+    top: auto;
+    bottom: 0;
+    padding: 14px 0;
+    background-color: #171717;
+    font-size: 0.8em;
+    transform: scale(1);
+    }
 
     .carousel{
         font-size: 0.8em;
