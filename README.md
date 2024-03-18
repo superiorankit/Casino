@@ -9,7 +9,7 @@ Welcome to the Casino page of my project! This project showcases a well-designed
 
 ## Original Photo
 
-To enhance the aesthetics of this page, I have incorporated an original photo. You can find the original photo in the "images" directory of this repository.
+To enhance the aesthetics of this page, I have incorporated an original photo. You can find the original photo in the "original-images" directory of this repository.
 
 ![Original Photo](./original-image/original-image.png)
 

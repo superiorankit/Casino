@@ -12,22 +12,27 @@
     width: 100%;
 }
 
+/* Wrapped every image to div therefore styling img tag width 100% */
 img{
     width: 100%;
 }
 
+/* Global class for giving font-family to particular element */
 .poppinsFont{
     font-family: "Poppins", sans-serif;
 }
 
+/* Global class for width 100% */
 .width100{
     width: 100%;
 }
 
+/* Global class for color white */
 .colorWhite{
     color: white;
 }
 
+/* Global class for margin 0 */
 .marginRemove{
     margin: 0;
 }
@@ -91,6 +96,8 @@ nav{
     position: relative;
 }
 
+
+/* Animation for Casino text */
 @keyframes textFill {
 
     0%{
@@ -492,6 +499,7 @@ nav{
     
 }
 
+/* Animation for Price Card */
 @keyframes border{
     from{
         border: 1px solid #000000b5;
