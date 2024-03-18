@@ -829,6 +829,9 @@ footer{
         font-size: 0.9em;
     }
 
+    .logo{
+        margin: auto;
+    }
     .toggleButton{
         display: none;
     }
